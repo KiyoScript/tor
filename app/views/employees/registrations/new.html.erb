@@ -1,0 +1,68 @@
+<div class="flex-container">
+  <div class="container">
+    <div class="row row-inner-container">
+      <div class="col-md-12">
+        <div class="row my-form-row" >
+          <div class="col-md-6 my-col position-relative right-side">
+            <div class="logo-container py-2 m-0 bg-white border-top border-bottom border-primary border-5">
+              <%= image_tag('logo-v2.png', class: 'img-logo') %>
+            </div>
+            <%= image_tag('portal1.png', class: 'position-absolute') %>
+          </div>
+          <div class="col-md-6 my-col">
+            <div class="my-form-container">
+              <div class="my-form-inner-container">
+                <div class="panel-header">
+                  <h2 class="text-center">
+                    EMPLOYEE PORTAL
+                  </h2>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h3 style="font-weight: bold;margin-bottom: 20px;" class="text-center">Sign Up</h3>
+                      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'login_validation d-flex flex-column gap-2'}) do |f| %>
+                        <div class='form-group d-flex flex-column gap-2'>
+                          <label for="employee_id" class="sr-only">Employee ID</label>
+                          <%= f.text_field :employee_id, autofocus: true, class: 'form-control', autocomplete: 'employee_id', id: 'employee_id' %>
+                        </div>
+                        <div class='form-group d-flex flex-column gap-2'>
+                          <label for="email" class="sr-only">Employee Email</label>
+                          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", id: 'email' %>
+                        </div>
+                        <div class='form-group d-flex flex-column gap-2'>
+                          <%= f.label :password, class: 'sr-only' %>
+                          <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+                        </div>
+                        <div class='form-group d-flex flex-column gap-2'>
+                          <%= f.label :password_confirmation %>
+                          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+                        </div>
+                        <%= f.submit "Sign Up", class:"btn btn-primary btn-block my-3 w-100" %>
+                        <div class='d-flex justify-content-between'>
+                          <small class="nav-link" >Already have an account?</small>
+                          <%= render "employees/shared/links" %>
+                        </div>
+                      <% end %>
+                    </div>
+                    <div class="col-xs-12">
+                      <br><br>
+                      <p class='text-center'>By using this service, you understood and agree to the
+                        <span class='text-danger'>EVSU Online Services Terms of Use and Privacy Statement</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p style='margin: 10px 0px'><small><%= link_to '← Back to Homepage', root_path, class: 'text-decoration-none ms-2' %></small></p>
+      </div>
+    </div>
+  </div>
+</div>
