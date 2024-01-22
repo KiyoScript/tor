@@ -1,5 +1,4 @@
 # Transcription of Record Web-based Application
-## Practice2x Only
 These are the following requirements and steps to get the application up and running.. 🤔
  - #### (For Windows User)
     - I. Install Subsystem Linux [YTLink](https://www.youtube.com/watch?v=AMlaEFaKG88)
